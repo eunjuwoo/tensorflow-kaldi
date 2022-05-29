@@ -16,13 +16,13 @@ In the future, this toolkit can be useful to make flexible Trigger System or EPD
 * [TEDLIUM](http://www.openslr.org/resources/7/TEDLIUM_release1.tar.gz, "Download the TEDLIUM dataset") dataset
   : English speech data
 
-## Methodelogy
+## Methodology
 ### Extract feature and Align.     
  Run the Kaldi s5_r3 baseline of TEDLIUM. This step is necessary to compute features and labels later used to train the Tensorflow neural network. We recommend running the tedlium s5 recipe (not including the DNN training):
   ```
   egs/tedlium/s5/run.sh
   ```
- We run the code below to use i-vector(100-th) and LDA(40-th) as features and alignment(phones) as labels. 
+ We run the code below to use i-vector(100-th) and MFCC(40-th) as features and alignment(phones) as labels. 
   ```
   ./main.sh --stage 3
   ```
